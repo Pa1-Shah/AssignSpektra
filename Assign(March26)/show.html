@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="res"></p>
+    <script>
+      var data = window.location.search;
+      var params = new URLSearchParams(data);
+      var name = params.get("Name");
+      var age = params.get("age");
+      var gender = params.get("gender");
+      var birthday = params.get("birthday");
+      var email = params.get("email");
+
+      var getData = "Name: " + name + "<br>";
+      getData += "Age: " + age + "<br>";
+      getData += "Gender: " + gender + "<br>";
+      getData += "Birthday: " + birthday + "<br>";
+      getData += "Email: " + email + "<br>";
+
+      document.getElementById("res").innerHTML = getData;
+    </script>
+  </body>
+</html>
