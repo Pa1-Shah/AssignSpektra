@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Price Table | devRasen</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        background-image: linear-gradient(to right, #4442aa, #6a82fb);
+        padding: 0 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header-title {
+        font-size: 26px;
+      }
+
+      .card {
+        transition: all 0.5s;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      .card-title {
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
+
+      .card-price {
+        font-size: 24px;
+      }
+
+      .card ul li {
+        margin-bottom: 5px;
+      }
+
+      .text-muted {
+        opacity: 0.7;
+      }
+
+      .btn {
+        font-size: 14px;
+        border: none;
+        background-color: #4442aa;
+        border-radius: 16px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+  
+    </style>
+  </head>
+
+  <body>
+    <section class="container py-5">
+      <div class="row">
+        <h3 class="header-title text-white text-center text-uppercase py-4">
+          <b>Price Table</b>
+        </h3>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center text-uppercase text-muted">
+                Start Up
+              </h5>
+              <h6 class="card-price text-center">$200</h6>
+              <hr />
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Upto 5 pages
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >1 Free Domain
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >1 GB Hosting
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Free SSL (Security)
+                </li>
+                <li class="text-muted">
+                  <span class="fa-li"
+                    ><i class="fas fa-times text-danger"></i></span
+                  >SEO optimized
+                </li>
+                <li class="text-muted">
+                  <span class="fa-li"
+                    ><i class="fas fa-times text-danger"></i></span
+                  >Free Subdomain
+                </li>
+                <li class="text-muted">
+                  <span class="fa-li"
+                    ><i class="fas fa-times text-danger"></i></span
+                  >Monthly Status Reports
+                </li>
+              </ul>
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary text-uppercase"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center text-uppercase text-muted">
+                Small Business
+              </h5>
+              <h6 class="card-price text-center">$300</h6>
+              <hr />
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Upto 10 pages
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >1 Free Domain
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >3 GB Hosting
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Free SSL (Security)
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >SEO optimized
+                </li>
+                <li class="text-muted">
+                  <span class="fa-li"
+                    ><i class="fas fa-times text-danger"></i></span
+                  >Free Subdomain
+                </li>
+                <li class="text-muted">
+                  <span class="fa-li"
+                    ><i class="fas fa-times text-danger"></i></span
+                  >Monthly Status Reports
+                </li>
+              </ul>
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary text-uppercase"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center text-uppercase text-muted">
+                Corporate
+              </h5>
+              <h6 class="card-price text-center">$400</h6>
+              <hr />
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Upto 15 pages
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >1 Free Domain
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >5 GB Hosting
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Free SSL (Security)
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >SEO optimized
+                </li>
+                <li>
+                  <span class="fa-li"
+                    ><i class="fas fa-check text-success"></i></span
+                  >Free Subdomain
+                </li>
+                <li class="text-muted">
+                  <span class="fa-li"
+                    ><i class="fas fa-times text-danger"></i></span
+                  >Monthly Status Reports
+                </li>
+              </ul>
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary text-uppercase"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
