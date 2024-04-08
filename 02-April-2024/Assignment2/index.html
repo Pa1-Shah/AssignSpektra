@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form</title>
+    <style>
+
+        body{
+            background-color: rgb(131, 131, 131);
+            font-family: sans-serif;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        .full{
+         padding: 50px 5px 50px 5px;
+         width: 500px;
+         margin: auto;
+         margin-top: 200px;
+         background-color: rgb(192, 209, 209);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="full" >
+    <h1>Registration Form</h1>
+    <table> 
+      <form> 
+          <tr> 
+            <td> <label for="name"> Name </label> </td> 
+            <td><input type="text" id="name" /> </td> 
+          </tr> 
+        
+          <tr> 
+            <td><label for="email"> Email </label> </td> 
+            <td><input type="email" id="email" /> </td> 
+          </tr> 
+          <tr>
+            <td><label for="pwd">Password:</label></td>
+            <td><input type="password" id="pwd" ></td>
+          </tr>
+            <tr> 
+            <td><label for="Phone"> Phone No. </label> </td> 
+            <td><input type="number" id="number" /> </td> 
+          </tr>
+          <!-- <tr> 
+            <td><label for="birthday">Birthday:</label></td> 
+            <td><input type="date" id="birthday" /> </td> 
+        </tr>  -->
+        <td> <button type="button" id="Submit" onclick="validate()">Submit</button></td>
+      </form> 
+  </table> 
+    </form>
+    </div>
+    <script>
+        function validate(){
+            let n = document.getElementById("name").value;
+     
+            for(let i=0; i<n.length; i++){
+                if(n[i]<='9'&&n[i]>='0'){
+                    alert("Please Enter a valid Name"); 
+                    return; 
+                }
+            }
+            let e = document.getElementById("email").value; 
+            if(e.indexOf('@') <= -1){
+                alert("Please enter valid email");
+                return;
+            }
+            else if(e.indexOf('.com')<=-1){
+                alert("Please enter valid email");
+                return;
+            }
+
+            let p = document.getElementById("pwd").value;
+            if(p.length<8){
+                alert("Password length must be of alteast 8 characters");
+                return;  
+            }
+            
+            let x = document.getElementById("number").value;
+            if(x.length!=10){
+                alert("Phone Number length must be of 10 characters");
+                return; 
+            }
+            
+            alert("Submission successful");
+        }
+
+    </script>
+  </body>
+</html>

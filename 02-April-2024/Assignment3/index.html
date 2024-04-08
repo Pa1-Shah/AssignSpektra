@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+    <meta charset="utf-8">
+</head>
+ 
+<body style="text-align: center;">
+    <h3 id="po">Enter Marks</h3>
+    <form id="marks" action="#" onsubmit="return avgSum()">
+        <label for="subject1"> Subject 1</label>
+        <input type="number" min="0" max="100" id="sub1" /><br>
+        
+        <label for="subject2"> Subject 2</label>
+        <input type="number" min="0" max="100" id="sub2" /><br>
+       
+        <label for="subject3"> Subject 3</label>
+        <input type="number" min="0" max="100" id="sub3" /><br>
+        
+        <label for="subject4"> Subject 4</label>
+        <input type="number" min="0" max="100" id="sub4" /><br>
+       
+        <label for="subject5"> Subject 5</label>
+        <input type="number" min="0" max="100" id="sub5" /><br>
+       
+        <button type="submit">Submit
+        </button>
+    </form>
+    <br>
+ 
+    <h4 id="res"></h4>
+    <h4 id="res2"></h4>
+    <h4 id="res3"></h4>
+
+ 
+    <script>
+        function avgSum() {
+            let sum = 0; 
+
+            let val1 = document.getElementById("sub1").value; 
+            let val2 = document.getElementById("sub2").value; 
+            let val3 = document.getElementById("sub3").value; 
+            let val4 = document.getElementById("sub4").value; 
+            let val5 = document.getElementById("sub5").value; 
+            
+            const input = []; 
+            input.push(val1, val2, val3, val4, val5); 
+            for (let i = 0; i < input.length; i++) {
+                let x = Number(input[i]);
+                sum = sum + x;
+            }
+            let avg = sum/input.length; 
+            document.getElementById("res").innerHTML = "Sum: " + sum;
+            document.getElementById("res2").innerHTML = "Avg: " + avg;
+            if(avg <= 70){
+                document.getElementById("res3").innerHTML = "Grade: " + 'D';
+                return;
+            }
+            else if(avg <=80){
+                document.getElementById("res3").innerHTML = "Grade: " + 'C';
+                return;
+            }
+            else if(avg <=90){
+                document.getElementById("res3").innerHTML = "Grade: " + 'B'; 
+                return;
+            }
+            else{
+                document.getElementById("res3").innerHTML = "Grade: " + 'A'; 
+            }
+ 
+        }
+    </script>
+</body>
+ 
+</html>

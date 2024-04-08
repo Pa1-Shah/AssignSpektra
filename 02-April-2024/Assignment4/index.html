@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Click on Button below to find if year from 2014 to 2050 has Sunday on First day</h3>
+        <button type="button" onclick="findJanFirst()">Find</button>  
+        <p id="res"></p>
+      
+
+
+    <script>
+        function findJanFirst(){
+            let x = 2014;  
+            let ans =""; 
+            for(let i=x; i<=2050; i++){
+                let d = new Date("January 1, " +i); 
+                if(d.getDay()==0){
+                    ans+= "<p>The year with Sunday on first day "+ i + "</p>";
+                }
+                
+            }
+            console.log(ans); 
+            document.getElementById("res").innerHTML = ans;
+            
+        }
+    </script>
+</body>
+</html>
